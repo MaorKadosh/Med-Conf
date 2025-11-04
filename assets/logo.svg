@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="conferenceLogoTitle conferenceLogoDesc">
+  <title id="conferenceLogoTitle">לוגו הכנס הלאומי לרפואה צבאית</title>
+  <desc id="conferenceLogoDesc">סמל אדום ולבן עם מגן דוד, מטה ונחש וטקסט בעברית ובאנגלית.</desc>
+  <defs>
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b3202d" />
+      <stop offset="100%" stop-color="#82121b" />
+    </linearGradient>
+    <linearGradient id="staffGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1b1b1b" />
+      <stop offset="100%" stop-color="#4d4d4d" />
+    </linearGradient>
+    <linearGradient id="snakeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f2f2f2" />
+      <stop offset="100%" stop-color="#bfbfbf" />
+    </linearGradient>
+  </defs>
+  <circle cx="300" cy="300" r="280" fill="url(#ringGradient)" />
+  <circle cx="300" cy="300" r="230" fill="#ffffff" />
+  <g transform="translate(300 300)">
+    <polygon points="0,-180 52,-60 170,-60 80,18 112,140 0,72 -112,140 -80,18 -170,-60 -52,-60" fill="#b3202d" />
+  </g>
+  <g transform="translate(300 300)">
+    <rect x="-16" y="-140" width="32" height="240" fill="url(#staffGradient)" rx="12" />
+    <path d="M0 -200 C-52 -200 -70 -170 -24 -150 C24 -130 12 -100 -20 -80 C-60 -58 -26 -20 12 -36 C44 -50 54 -20 32 2 C10 26 8 58 40 78 C72 96 68 134 20 140" fill="none" stroke="url(#snakeGradient)" stroke-width="20" stroke-linecap="round" />
+    <circle cx="0" cy="-170" r="46" fill="#1b1b1b" />
+  </g>
+  <g font-family="'Assistant', 'Rubik', 'Arimo', sans-serif" font-weight="700" text-anchor="middle">
+    <text x="300" y="120" font-size="36" fill="#ffffff">הכנס הלאומי לרפואה צבאית</text>
+    <text x="300" y="170" font-size="32" fill="#ffffff">NATIONAL MILITARY MEDICINE CONFERENCE</text>
+  </g>
+</svg>

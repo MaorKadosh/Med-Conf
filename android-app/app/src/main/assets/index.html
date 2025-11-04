@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>טיימר כנס רפואה צבאית</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="app-header">
+        <div class="header-text">
+          <h1>הכנס הלאומי לרפואה צבאית</h1>
+          <p>ניהול טיימר לדוברים באולמות הכנס</p>
+        </div>
+        <img src="assets/logo.svg" alt="לוגו הכנס הלאומי לרפואה צבאית" class="header-logo" />
+        <div class="header-actions">
+          <button id="fullscreenButton" class="accent-button">מסך מלא</button>
+          <button id="wakeLockButton" class="accent-button">מניעת שינה</button>
+        </div>
+      </header>
+
+      <nav class="screen-tabs">
+        <button class="tab-button active" data-screen="management">מסך ניהול</button>
+        <button class="tab-button" data-screen="timer">מסך טיימר</button>
+      </nav>
+
+      <main>
+        <section id="managementScreen" class="screen active">
+          <div class="panel">
+            <h2>הגדרות ומעקב</h2>
+            <form id="speakerForm" class="speaker-form">
+              <div class="form-row">
+                <label for="hallSelect">אולם:</label>
+                <select id="hallSelect" required>
+                  <option value="melia">מליאה</option>
+                  <option value="hall1">אולם 1</option>
+                  <option value="hall2">אולם 2</option>
+                  <option value="hall3">אולם 3</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="speakerName">שם המרצה:</label>
+                <input id="speakerName" type="text" placeholder="לדוגמה: ד&quot;ר כהן" required />
+              </div>
+              <div class="form-row">
+                <label for="lectureTopic">נושא ההרצאה:</label>
+                <input id="lectureTopic" type="text" placeholder="לדוגמה: חדשנות רפואית" required />
+              </div>
+              <div class="form-row">
+                <label for="lectureMinutes">משך ההרצאה (דקות):</label>
+                <input id="lectureMinutes" type="number" min="1" max="180" value="15" required />
+              </div>
+              <button type="submit" class="primary-button">הוספת מרצה לרשימה</button>
+            </form>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h2>רשימת מרצים באולם <span id="activeHallName">מליאה</span></h2>
+              <div class="panel-actions">
+                <button id="setActiveHall" class="secondary-button">בחר טאבלט לאולם זה</button>
+              </div>
+            </div>
+            <div id="speakerListContainer" class="speaker-list"></div>
+          </div>
+
+          <div class="panel">
+            <h2>שליטה בטיימר</h2>
+            <div class="timer-controls">
+              <div class="timer-status">
+                <p class="status-label">מרצה פעיל:</p>
+                <p id="currentSpeakerLabel" class="status-value">אין מרצה פעיל</p>
+                <p class="status-label">נושא:</p>
+                <p id="currentTopicLabel" class="status-value">-</p>
+                <p class="status-label">זמן נותר:</p>
+                <p id="currentTimeLabel" class="status-value large">00:00</p>
+              </div>
+              <div class="control-buttons">
+                <button id="startPauseButton" class="primary-button">התחל טיימר</button>
+                <button id="resetButton" class="secondary-button">איפוס זמן</button>
+                <button id="prevSpeakerButton" class="secondary-button">מרצה קודם</button>
+                <button id="nextSpeakerButton" class="secondary-button">מרצה הבא</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="timerScreen" class="screen">
+          <div class="timer-display">
+            <img src="assets/logo.svg" alt="לוגו הכנס הלאומי לרפואה צבאית" class="timer-logo" />
+            <div class="timer-info">
+              <p class="timer-hall">אולם: <span id="timerHallName">מליאה</span></p>
+              <p class="timer-speaker">מרצה: <span id="timerSpeakerName">---</span></p>
+              <p class="timer-topic">נושא ההרצאה: <span id="timerTopic">---</span></p>
+              <p class="timer-remaining" id="timerRemaining">00:00</p>
+              <div class="progress-wrapper">
+                <div class="progress-bar" id="timerProgress"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <p>פותח עבור הכנס הלאומי לרפואה צבאית | מדור תקשוב משר״פ, 8280</p>
+      </footer>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
