@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="medconf_primary">#C62828</color>
+    <color name="medconf_on_primary">#FFFFFFFF</color>
+    <color name="medconf_surface">#FFFAFAFA</color>
+    <color name="medconf_black">#FF000000</color>
+    <color name="ic_launcher_background">#FFFFFFFF</color>
+</resources>
